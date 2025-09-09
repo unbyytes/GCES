@@ -3,6 +3,9 @@
 ## Blue Team
 
 - Breno Lucena Cordeiro - 202017343 - [BrenoLUCO](https://github.com/BrenoLUCO)
+- Daniel Rocha Oliveira - 190104821 - [DanRocha18](https://github.com/DanRocha18)
+- Miguel Arthur - 211062320 - [zlimaz](https://github.com/zlimaz)
+- Ana Carolina - 221031102 - [anawcarol](https://github.com/anawcarol)
 
 ## Red Team
 
