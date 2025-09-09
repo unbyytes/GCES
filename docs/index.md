@@ -2,7 +2,7 @@
 
 ## Blue Team
 
-- 
+- Breno Lucena Cordeiro - 202017343 - [BrenoLUCO](https://github.com/BrenoLUCO)
 
 ## Red Team
 
