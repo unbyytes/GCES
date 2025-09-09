@@ -29,7 +29,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - run: pip install mkdocs-bootstrap4
+    - run: pip install mkdocs
 
     - name: Deploy Docs
       run: mkdocs gh-deploy --force
