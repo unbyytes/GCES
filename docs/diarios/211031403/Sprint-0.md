@@ -14,18 +14,18 @@ O objetivo principal desta sprint foi configurar o ambiente de desenvolvimento p
 
 | Data | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| 08/09 | Estudo inicial do `README.md` do projeto | Estudo | [[https://gitlab.com/pencillabs/ej/ej-application](https://gitlab.com/pencillabs/ej/ej-application/-/blob/develop/README.md?ref_type=heads)] | Concluído |
-| 09/09 | Instalação e configuração do Docker Engine no WSL | Configuração | - | Concluído |
-| 09/09 | Diagnóstico e correção de erros de DNS do Docker no WSL | Debug/Configuração | - | Concluído |
-| 09/09 | Tentativa de uso do `pyenv` e diagnóstico do erro `cygpath not found` | Debug/Discussão | - | Concluído |
-| 09/09 | Reinstalação e configuração da versão nativa do `pyenv` para Linux | Configuração | - | Concluído |
-| 09/09 | Instalação das dependências de compilação para o Python | Configuração | - | Concluído |
-| 09/09 | Instalação da versão específica do Python (3.11.9) com `pyenv` | Código | - | Concluído |
-| 09/09 | Criação e ativação do ambiente virtual (`venv`) para o projeto | Código | - | Concluído |
-| 09/09 | Instalação das dependências Python do projeto com `pip` | Código | - | Concluído |
-| 09/09 | Diagnóstico e correção do erro de `docker-buildx` | Debug/Configuração | - | Concluído |
-| 09/09 | Execução bem-sucedida da aplicação via `inv docker-up` | Código | `http://localhost:8000` | Concluído |
-| 09/09 | Execução da suíte de testes do projeto com `inv docker-test` | Código | - | Concluído |
+| 06/09 | Estudo inicial do `README.md` do projeto | Estudo | [[https://gitlab.com/pencillabs/ej/ej-application](https://gitlab.com/pencillabs/ej/ej-application/-/blob/develop/README.md?ref_type=heads)] | Concluído |
+| 06/09 | Instalação e configuração do Docker Engine no WSL | Configuração | - | Concluído |
+| 06/09 | Diagnóstico e correção de erros de DNS do Docker no WSL | Debug/Configuração | - | Concluído |
+| 06/09 | Tentativa de uso do `pyenv` e diagnóstico do erro `cygpath not found` | Debug/Discussão | - | Concluído |
+| 07/09 | Reinstalação e configuração da versão nativa do `pyenv` para Linux | Configuração | - | Concluído |
+| 07/09 | Instalação das dependências de compilação para o Python | Configuração | - | Concluído |
+| 07/09 | Instalação da versão específica do Python (3.11.9) com `pyenv` | Código | - | Concluído |
+| 07/09 | Criação e ativação do ambiente virtual (`venv`) para o projeto | Código | - | Concluído |
+| 07/09 | Instalação das dependências Python do projeto com `pip` | Código | - | Concluído |
+| 07/09 | Diagnóstico e correção do erro de `docker-buildx` | Debug/Configuração | - | Concluído |
+| 08/09 | Execução bem-sucedida da aplicação via `inv docker-up` | Código | `http://localhost:8000` | Concluído |
+| 08/09 | Execução da suíte de testes do projeto com `inv docker-test` | Código | - | Concluído |
 
 #### **Maiores Avanços**
 
