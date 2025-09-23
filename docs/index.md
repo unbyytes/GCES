@@ -7,6 +7,7 @@
 - Miguel Arthur - 211062320 - [zlimaz](https://github.com/zlimaz)
 - Ana Carolina Fialho - 221031102 - [anawcarol](https://github.com/anawcarol)
 - Guilherme Peixoto - 170034941 - [guipeeix7](https://github.com/guipeeix7)
+- Sebastián Zuzunaga - 211006957 - [sebazac332](https://github.com/sebazac332)
 
 ## Red Team
 
