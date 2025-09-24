@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'docs/**'
+      - 'diarios/**'
+      - 'mkdocs.yml'
   workflow_dispatch:
 
 permissions:
