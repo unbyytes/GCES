@@ -44,11 +44,35 @@
 <li>
     <a href="./" class="dropdown-item active" aria-current="page">Sprint 0</a>
 </li>
+                                    
+<li>
+    <a href="../1/" class="dropdown-item">Sprint 1</a>
+</li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Diários</a>
                                 <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Guilherme Peixoto (170034941)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../diarios/170034941/0/" class="dropdown-item">Sprint 0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sebastian Zuzunaga (211006957)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../diarios/211006957/0/" class="dropdown-item">Sprint 0</a>
+</li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Mateus Vieira (221008703)</a>
@@ -65,7 +89,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../diarios/211031744/" class="dropdown-item">Sprint 0</a>
+    <a href="../../diarios/211031744/0/" class="dropdown-item">Sprint 0</a>
 </li>
     </ul>
   </li>
@@ -89,6 +113,46 @@
 </li>
     </ul>
   </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Henrique Hida (180113569)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../diarios/180113569/0/" class="dropdown-item">Sprint 0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Daniel Rocha Oliveira (190104821)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../diarios/190104821/sprint_0_diario/" class="dropdown-item">Sprint 0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Henrique Camelo Quenino (221008098)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../diarios/221008098/0/" class="dropdown-item">Sprint 0</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ana Carolina Fialho(221031102)</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../diarios/221031102/0/" class="dropdown-item">Sprint 0</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                         </ul>
@@ -105,7 +169,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../diarios/221008703/0/" class="nav-link">
+                                <a rel="next" href="../1/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -255,6 +319,12 @@
 <td><a href="#5-maiores-dificuldades">Maiores Dificuldades</a></td>
 <td></td>
 </tr>
+<tr>
+<td>Henrique Quenino</td>
+<td>Documentação de Aprendizados</td>
+<td><a href="#6-lições-aprendidas">Lições Aprendidas</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -366,10 +436,10 @@ Esse comando do Docker-up serve para baixar todas as dependências, criar os con
 <p>Em resumo, o projeto demonstra maturidade ao fornecer uma configuração de desenvolvimento limpa e auto contida, enquanto desacopla a aplicação da infraestrutura de produção. Em vez de definir uma configuração de produção rígida dentro do repositório, ele indica os componentes essenciais para produção (servidor Gunicorn) através de suas dependências e espera que o ambiente de implantação final gerencie o resto da infraestrutura (como o banco de dados e o reverse proxy).</p>
 <hr />
 <h2 id="5-maiores-dificuldades">5. Maiores Dificuldades</h2>
-<p>A utilização do Docker facilitou em subir o ambiente isolado com todas as dependências instaladas, a configuração do ambiente foi concluída com sucesso, sem ocorrências de problemas técnicos, o projeto aparenta ser bem documentado e é possível subir uma página de documentação local <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> rodando <code>inv docker-exec "inv docs"</code> após a configuração inicial do ambiente.</p>
+<p>A utilização do Docker facilitou em subir o ambiente isolado com todas as dependências instaladas, a configuração do ambiente foi concluída com sucesso, sem ocorrências de problemas técnicos, mas alguns integrantes tiveram dificuldade parar subir o ambiente usando WSL no Windows, o projeto aparenta ser bem documentado e é possível subir uma página de documentação local <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> rodando <code>inv docker-exec "inv docs"</code> após a configuração inicial do ambiente.</p>
 <hr />
 <h2 id="6-licoes-aprendidas">6. Lições Aprendidas</h2>
-<p>Descrever...</p>
+<p>Nesta sprint, o principal aprendizado foi sobre a importância de ter um ambiente de desenvolvimento bem configurado e documentado. O uso do Docker possibilita isolar todas as dependências do projeto em containers, garantindo que todos trabalhem em ambientes idênticos, o que elimina o famoso problema do “funciona na minha máquina”. Por fim concluimos que praticar essas técnicas acelera o desenvolvimento, reduz retrabalho, proporciona escalabilidade e melhora a colaboração entre times, entregando mais qualidade durante todo o ciclo de vida do software.</p>
 <hr />
 <h2 id="7-planejamento-para-a-proxima-sprint">7. Planejamento para a Próxima Sprint</h2>
 <h3 id="blue-team">Blue Team</h3>
