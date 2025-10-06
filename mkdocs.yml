@@ -5,6 +5,9 @@ nav:
   - Sprints:
       - Sprint 0: sprints/0.md
       - Sprint 1: sprints/1.md
+      - Sprint 2: sprints/2.md
+  - Estudo:
+      - CI/CD: estudo/ci-cd.md
   - Diários:
       - Guilherme Peixoto (170034941):
           - Sprint 0: diarios/170034941/0.md
