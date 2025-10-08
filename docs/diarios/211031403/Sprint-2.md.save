@@ -1,0 +1,83 @@
+Diário de Bordo – Marcus
+Disciplina: Gerência de Configuração e Evolução de Software
+Equipe: [Nome da Equipe]
+Comunidade/Projeto de Software Livre: Pencil Labs / EJ-Application
+
+Sprint 3 – [Data de Início] – [Data de Fim]
+Resumo da Sprint
+O foco desta sprint foi o estudo e a análise de duas classes de vulnerabilidades: IDOR (Insecure Direct Object References) e Gerenciamento de Sessões Inseguras. A pesquisa foi focada em entender o conceito, os riscos associados e, principalmente, em como essas falhas poderiam ser exploradas no contexto da aplicação EJ-Platform, rodando em um ambiente de desenvolvimento local.
+
+Atividades Realizadas
+Data	Atividade	Tipo (Código/Doc/Discussão/Outro)	Link/Referência	Status
+[Data]	Estudo sobre vulnerabilidades IDOR	Estudo	OWASP - IDOR	Concluído
+[Data]	Estudo sobre Gerenciamento de Sessões Inseguras	Estudo	OWASP - Session Management	Concluído
+[Data]	Exploração manual da aplicação com múltiplos usuários	Outro	-	Concluído
+[Data]	Análise de cookies de sessão e seus atributos de segurança	Outro	-	Concluído
+[Data]	Tentativa de exploração de IDOR entre usuários	Outro	-	Concluído
+
+Exportar para as Planilhas
+Ferramentas
+Navegador Web (Chrome/Firefox) e Ferramentas de Desenvolvedor (DevTools): Essencial para a análise. A aba "Network" foi usada para observar as requisições e a aba "Application" (ou "Storage") para inspecionar os cookies de sessão.
+
+Múltiplos Perfis de Navegador/Janelas Anônimas: Utilizados para manter sessões ativas de dois usuários diferentes (user@user.com e admin@admin.com) simultaneamente, passo crucial para testar o controle de acesso do IDOR.
+
+Passo a Passo e Exemplos com Aplicação na EJ
+O objetivo foi simular como um invasor poderia explorar essas vulnerabilidades dentro do contexto da aplicação "Empurrando Juntas".
+
+A. Teste de IDOR (Insecure Direct Object Reference)
+
+IDOR é uma falha de controle de acesso onde um invasor consegue acessar ou modificar dados de outros usuários simplesmente alterando o valor de um parâmetro (ID) em uma requisição.
+
+Cenário de Exploração na EJ-Platform: A hipótese foi que um usuário comum poderia acessar informações de um dashboard ou perfil que pertencem a outro usuário, como um administrador, se o sistema não validasse a permissão corretamente. Por exemplo, se a URL para ver um perfil fosse http://localhost:8000/users/1/profile.
+
+Método de Teste:
+
+Preparação: Utilizando o comando inv docker-exec "inv db-fake", garanti que os usuários user@user.com (usuário comum) e admin@admin.com (administrador) existissem no banco de dados.
+
+Login Simultâneo: Fiz o login com user@user.com em um navegador e com admin@admin.com em uma janela anônima.
+
+Identificação de IDs: Como admin, naveguei até uma página de seu perfil ou dashboard e anotei o ID presente na URL (ex: .../dashboards/1/).
+
+Tentativa de Acesso Direto: No navegador logado como user@user.com, colei a URL do dashboard do admin (.../dashboards/1/).
+
+Análise do Resultado: Verifiquei se a aplicação bloqueou o acesso (mostrando um erro "403 Forbidden" ou "Não encontrado") ou se ela exibiu indevidamente os dados do dashboard do administrador.
+
+B. Análise de Sessões / Cookies Inseguros
+
+Esta análise verifica se os cookies usados para gerenciar a sessão do usuário estão configurados com atributos de segurança essenciais.
+
+Cenário de Exploração na EJ-Platform: A hipótese era verificar se o cookie de sessão (sessionid) estava sendo transmitido sem as flags de segurança recomendadas, o que poderia facilitar ataques como roubo de sessão (Session Hijacking), especialmente em conjunto com um ataque de XSS.
+
+Método de Teste:
+
+Login na Aplicação: Fiz login com qualquer usuário.
+
+Inspeção do Cookie: Abri as Ferramentas de Desenvolvedor (F12) -> aba "Application" -> "Cookies".
+
+Análise dos Atributos: Localizei o cookie sessionid e verifiquei a presença das seguintes flags:
+
+HttpOnly: Se presente, impede que o cookie seja acessado por scripts JavaScript no lado do cliente, uma defesa crucial contra XSS.
+
+Secure: Se presente, garante que o cookie só seja enviado em requisições HTTPS.
+
+SameSite: Ajuda a mitigar ataques de CSRF (Cross-Site Request Forgery).
+
+Resultado
+(Esta seção é um exemplo de como você preencheria com base em resultados hipotéticos)
+
+IDOR: Não foram encontradas vulnerabilidades de IDOR nos endpoints testados. A aplicação parece validar corretamente se o usuário logado tem permissão para acessar o recurso solicitado, retornando um erro de acesso negado quando um usuário tenta acessar o dashboard de outro.
+
+Cookies Inseguros: Foi identificado que o cookie sessionid é criado sem a flag Secure. Embora isso não seja um risco crítico em ambiente de desenvolvimento local (http), em um ambiente de produção com HTTPS, a ausência dessa flag permitiria que o cookie fosse enviado por conexões não criptografadas, tornando-o vulnerável à interceptação. A flag HttpOnly está presente, o que é uma boa prática de segurança.
+
+Maiores Dificuldades
+A principal dificuldade foi gerenciar duas sessões de usuários distintas de forma simultânea para realizar os testes de IDOR, exigindo o uso de diferentes navegadores ou perfis para evitar o compartilhamento de cookies.
+
+Aprendizados
+Aprendi na prática como elaborar e executar um teste de hipótese para vulnerabilidades de IDOR, focando na manipulação de IDs em URLs para testar o controle de acesso do backend. Também compreendi o significado e a importância dos atributos de segurança de cookies (HttpOnly, Secure, SameSite) e como inspecioná-los usando ferramentas que já vêm no navegador.
+
+Plano Pessoal para a Próxima Sprint
+[ ] Automatizar os testes de IDOR usando um script para verificar múltiplos endpoints e IDs.
+
+[ ] Investigar a fundo a flag SameSite e realizar testes de CSRF na aplicação.
+
+[ ] Abrir uma "issue" no repositório do projeto sugerindo a adição da flag Secure nos cookies de sessão para o ambiente de produção.
