@@ -18,7 +18,8 @@ As mitigações sugeridas focam em três pilares: validação rigorosa de todas 
 ## 2\. Diagrama de Fluxo de Dados (DFD) de Referência
 
 A análise a seguir baseia-se no DFD Nível 1, que detalha os principais processos, atores, repositórios de dados e as fronteiras de confiança do sistema.  
-*(Lembre-se de inserir a imagem do DFD aqui no seu Google Docs)*
+
+![DFD](./imgs/DFD-EJ.drawio.png)
 
 ## 3\. Análise STRIDE Detalhada por Componente
 
