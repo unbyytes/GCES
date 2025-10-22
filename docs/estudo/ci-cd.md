@@ -172,7 +172,7 @@ deploy:
 ## 3. O Arquivo exemplo `.gitlab-ci.yml`
 
 Esse arquivo **controla todo o pipeline**. Ele é criado na **raiz do repositório** e descreve as etapas (stages), tarefas (jobs), imagens e comandos.
-O arquivo  abaixo é um exemplo completo de .yml, é controlador de todo o pipeline do sistema. Sendo cirado na **raíz do repositório**, o .yml descreve as etapas (stages), tarefas (jobs), imagens e comandos necessários para construir, testar e implantar a aplicação da EJ Plataform, com backend em Python (Flask) e frontend em React, além de fazer deploy em ambientes de homologação (staging) e produção. Esse arquivo exemplo está adaptado para a aplicação ao qual o projeto de GCES está vinculado. Para acessar o arquivo original, segue o link do arquivo criado <a href="/GCES/docs/estudo/exemplo_git_lab.yml" download> exemplo_git_lab.yml</a>
+O arquivo  abaixo é um exemplo completo de .yml, é controlador de todo o pipeline do sistema. Sendo cirado na **raíz do repositório**, o .yml descreve as etapas (stages), tarefas (jobs), imagens e comandos necessários para construir, testar e implantar a aplicação da EJ Plataform, com backend em Python (Flask) e frontend em React, além de fazer deploy em ambientes de homologação (staging) e produção. Esse arquivo exemplo está adaptado para a aplicação ao qual o projeto de GCES está vinculado. Para acessar o arquivo original, segue o link do arquivo criado [arquivo exemplo](../../estudo/exemplo_git_lab.yml).
 
 ###  Estrutura Básica
 ```yaml
