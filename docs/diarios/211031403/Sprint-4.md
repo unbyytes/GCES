@@ -14,10 +14,10 @@ Nesta sprint, o foco foi planejar a execução do ataque de Session Hijacking na
 
 | Data | Atividade | Tipo (Código/Doc/Discussão/Outro) | Link/Referência | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| 09/09 | Estudo sobre vulnerabilidades Cookies | Estudo | [[OWASP - Cookies](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes)] | Concluído |
-| 12/10 | Definição da arquitetura do ataque (Host vs VM Bridge) | Planejamento |  | Concluído |
-| 14/10 | Preparação do ambiente com usuários de teste | Configuração | - | Concluído |
-| 19/09 | Análise/Suporte do teste prático de Cookies de Sessão (Flags Segurança) | Estudo/Teste | - | Concluído |
+| 26/1 | Estudo sobre vulnerabilidades Cookies | Estudo | [[OWASP - Cookies](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes)] | Concluído |
+| 02/11 | Definição da arquitetura do ataque (Host vs VM Bridge) | Planejamento |  | Concluído |
+| 16/11 | Preparação do ambiente com usuários de teste | Configuração | - | Concluído |
+| 16/11 | Análise/Suporte do teste prático de Cookies de Sessão (Flags Segurança) | Estudo/Teste | - | Concluído |
 
 #### **Ferramentas**
 
