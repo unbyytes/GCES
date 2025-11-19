@@ -7,6 +7,7 @@ nav:
       - Sprint 1: sprints/1.md
       - Sprint 2: sprints/2.md
       - Sprint 3: sprints/3.md
+      - Sprint 4: sprints/4.md
   - Estudo Blue Team:
       - CI/CD: estudo/ci-cd.md
       - Ferramentas de segurança: estudo/ferramentas.md
@@ -23,6 +24,7 @@ nav:
           - Sprint 1: diarios/221008703/1.md
           - Sprint 2: diarios/221008703/2.md
           - Sprint 3: diarios/221008703/3.md
+          - Sprint 4: diarios/221008703/4.md
       - Júlio Costa (211031744):
           - Sprint 0: diarios/211031744/0.md
           - Sprint 1: diarios/211031744/1.md
