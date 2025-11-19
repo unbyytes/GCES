@@ -11,6 +11,7 @@ nav:
   - Estudo Blue Team:
       - CI/CD: estudo/ci-cd.md
       - Ferramentas de segurança: estudo/ferramentas.md
+      - Ferramentas de segurança Utilizadas: estudo/ferramentas-utilizadas.md
   - Diários:
       - Guilherme Peixoto (170034941):
           - Sprint 0: diarios/170034941/0.md
