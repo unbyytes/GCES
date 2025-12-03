@@ -37,7 +37,7 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | **Issue** | Criar stage de segurança na pipeline e gerar relatório de vulnerabilidades| [Issue #1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) | Sprint 5 | Ainda não |
 | **Issue** | HTTP Security Headers faltando (CSP, HSTS, X-Content-Type-Options). | [Issue #1512](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1512) | Sprint 5 | Ainda não |
 | **MR** | Implementação de 3 HTTP Security Headers. | [MR #398](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/398) | Sprint 5 | Ainda não |
-
+| **Issue** | Documentação de estudos realizados para implementação da Pipeline. | [Issue #1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) | Sprint 5 | Ainda não |
 
 ### Participação Individual
 
@@ -49,6 +49,7 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | Daniel Rocha Oliveira | 190104821 | [MR #394](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/394) = 1 MR | [Issue #1506](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1506) + [#Issue #1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) + [Issue #1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) = 3 Issues | 3 | 0 |
 | Miguel Arthur | 211062320 |[MR #394](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/394) = 1 MR| [#Issue 1506](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1506) + [#Issue 1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) + [#Issue 1508](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1508) + [#Issue 1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) + [#Issue 1513](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1513) = 5 Issue | 5 | 0 |
 | Henrique Camelo Quenino | 221008098 | [MR #398](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/398) = 1 MR | [Issue #1512](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1512) = 1 Issue | 2 | 0 |
+| Sebastián Héctor Zuzunaga Rosado | 211006957 | [MR #394](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/394) = 1 MR | [Issue #1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) = 1 Issue | 1 | 0 |
 ---
 
 ## 3. Relato das Tomadas de Decisão de Organização da Equipe
