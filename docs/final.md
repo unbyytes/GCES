@@ -34,7 +34,7 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | **MR** | Correção (Fix) da vulnerabilidade XSS. | [MR #392](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/392) | Sprint 4 | Ainda não |
 | **MR** | Guia de Contribuição de Segurança para Jinja2. | [MR #395](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/395) | Sprint 5 | Ainda não |
 | **Issue** | Reporte da falha de Session Hijacking | [Issue #1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) | Sprint 5 | Ainda não |
-
+| **Issue** | Criar stage de segurança na pipeline e gerar relatório de vulnerabilidades| [Issue #1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) | Sprint 5 | Ainda não |
 ### Participação Individual
 
 | Membro | Matrícula | PR/MRs | Issues | Contagem Total | Aceitos |
