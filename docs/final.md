@@ -33,12 +33,15 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | **Issue** | Reporte oficial da falha de XSS (Persistente). | [Issue #1505](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1505) | Sprint 3 | - |
 | **MR** | Correção (Fix) da vulnerabilidade XSS. | [MR #392](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/392) | Sprint 4 | Ainda não |
 | **MR** | Guia de Contribuição de Segurança para Jinja2. | [MR #395](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/395) | Sprint 5 | Ainda não |
+| **Issue** | Reporte da falha de Session Hijacking | [Issue #1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) | Sprint 5 | Ainda não |
 
 ### Participação Individual
 
 | Membro | Matrícula | PR/MRs | Issues | Contagem Total | Aceitos |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Mateus Vieira | 221008703 | [MR #392](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/392) + [MR #395](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/395) = 2 MRs | [Issue #1505](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1505) = 1 Issue | 3 | 0 |
+| Marcus Vinicius Cunha Dantas | 211031403 | - | [#Issue 1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) = 1 Issue | 1 | 0 |
+| Júlio César Costa | 211031744 | - | [#Issue 1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) = 1 Issue | 1 | 0 |
 
 ---
 
