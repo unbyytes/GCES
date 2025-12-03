@@ -45,6 +45,8 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | Marcus Vinicius Cunha Dantas | 211031403 | - | [#Issue 1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) = 1 Issue | 1 | 0 |
 | Júlio César Costa | 211031744 | - | [#Issue 1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) = 1 Issue | 1 | 0 |
 | Daniel Rocha Oliveira | 190104821 | [MR #394](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/394) = 1 MR | [Issue #1506](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1506) + [#Issue #1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) + [Issue #1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) = 3 Issues | 4 | 0 |
+| Miguel Arthur | 211062320 | - | [#Issue 1506](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1506) + [#Issue 1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) + [#Issue 1508](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1508) + [#Issue 1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) + = 4 Issue | 4 | 0 |
+
 
 ---
 
