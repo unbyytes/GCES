@@ -20,7 +20,7 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | **2** (Ataque/DFD/CI) | Conclusão do Diagrama de Fluxo de Dados (**DFD**) e da Modelagem de Riscos (STRIDE). Estudo e *PoC* de **GitLab CI/CD**, **Gitleaks** e **Bandit**. | Exploração dos ataques estudados (SQLi, CSRF, XSS, Clickjacking, IDOR, Cookies, Brute Force). **Vulnerabilidade XSS Persistente Encontrada**. | | DFD e Análise de Ameaças Concluídos. **PoC de CI/CD** com ferramentas de segurança. | - |
 | **3** (Arsenal/Phishing) | Pesquisa e Seleção do Arsenal de Segurança (*open-source*): **Gitleaks** (Secrets), **Semgrep** (SAST), **pip-audit** (SCA), **Trivy** (IaC). **Início da Implementação** no pipeline. | Simulação de **Phishing** direcionado (*Spear Phishing*). Validação de Controle de Acesso (IDOR e JWT) - **sem vulnerabilidades encontradas**. | | Arsenal DevSecOps Selecionado e Implementado Parcialmente. Abertura da **Issue pública sobre XSS**. | [Issue #1505 (XSS)](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1505) |
 | **4** (DevSecOps) | **Implementação Completa do Arsenal** no pipeline (Gitleaks, Semgrep, pip-audit, Trivy). Criação do estágio `security_scan`. Documentação técnica da integração e dos achados iniciais. | Ataque de **Session Hijacking** realizado com sucesso (falha na flag `Secure` do cookie). **Correção (Fix) da vulnerabilidade XSS** identificada. | | Pipeline DevSecOps Ativo. Fix da vulnerabilidade XSS. | [MR #392 (Fix XSS)](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/392) |
-| **5** (Documentação) | - | Documentação das TTPs (Táticas, Técnicas e Procedimentos) do XSS no formato **MITRE ATT&CK**. Criação de **Guia de Contribuição Segura para Jinja2** (para prevenir XSS). | | Relatório MITRE ATT&CK. Guia de Segurança para Contribuições. | [MR #395 (Guia Jinja2)](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/395) |
+| **5** (Documentação + Headers + PoC Scripts) | Documentação das TTPs (Táticas, Técnicas e Procedimentos) do XSS no formato **MITRE ATT&CK**. Criação de **Guia de Contribuição Segura para Jinja2** (para prevenir XSS). | **Hardening de HTTP Security Headers** (CSP, HSTS, X-Content-Type-Options): CVSS reduzido de 5.9 para ~2.0. **Consolidação de biblioteca de scripts reutilizáveis** para testes de PoC (XSS, SQLi, rate limiting). | | Relatório MITRE ATT&CK. Guia de Segurança para Jinja2. **HTTP Headers hardening + biblioteca PoC scripts**. | [MR #395 (Guia Jinja2)](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/395), [MR #398](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/398) |
 
 ---
 
@@ -35,6 +35,8 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | **MR** | Guia de Contribuição de Segurança para Jinja2. | [MR #395](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/395) | Sprint 5 | Ainda não |
 | **Issue** | Reporte da falha de Session Hijacking | [Issue #1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) | Sprint 5 | Ainda não |
 | **Issue** | Criar stage de segurança na pipeline e gerar relatório de vulnerabilidades| [Issue #1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) | Sprint 5 | Ainda não |
+| **Issue** | HTTP Security Headers faltando (CSP, HSTS, X-Content-Type-Options). | [Issue #1512](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1512) | Sprint 5 | Ainda não |
+| **MR** | Implementação de 3 HTTP Security Headers. | [MR #398](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/398) | Sprint 5 | Ainda não |
 
 
 ### Participação Individual
@@ -46,8 +48,7 @@ A equipe (Blue e Red Team) trabalhou para estabelecer um ambiente de desenvolvim
 | Júlio César Costa | 211031744 | - | [#Issue 1510](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1510) = 1 Issue | 1 | 0 |
 | Daniel Rocha Oliveira | 190104821 | [MR #394](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/394) = 1 MR | [Issue #1506](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1506) + [#Issue #1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) + [Issue #1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) = 3 Issues | 3 | 0 |
 | Miguel Arthur | 211062320 |[MR #394](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/394) = 1 MR| [#Issue 1506](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1506) + [#Issue 1507](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1507) + [#Issue 1508](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1508) + [#Issue 1509](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1509) + = 4 Issue | 4 | 0 |
-
-
+| Henrique Camelo Quenino | 221008098 | [MR #398](https://gitlab.com/pencillabs/ej/ej-application/-/merge_requests/398) = 1 MR | [Issue #1512](https://gitlab.com/pencillabs/ej/ej-application/-/issues/1512) = 1 Issue | 2 | 0 |
 ---
 
 ## 3. Relato das Tomadas de Decisão de Organização da Equipe
