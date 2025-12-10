@@ -1,0 +1,4257 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2/">
+      
+      
+        <link rel="next" href="../4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Sprint 3 - GCES - OWASP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#relatorio-de-contribuicao-sprint-3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GCES - OWASP" class="md-header__button md-logo" aria-label="GCES - OWASP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCES - OWASP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sprint 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0/" class="md-tabs__link">
+          
+  
+  
+  Sprints
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../estudo/ci-cd/" class="md-tabs__link">
+          
+  
+  
+  Estudo Blue Team
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../diarios/170034941/0/" class="md-tabs__link">
+          
+  
+  
+  Diários
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../final/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Conclusão
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GCES - OWASP" class="md-nav__button md-logo" aria-label="GCES - OWASP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GCES - OWASP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprints
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sprints
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos-da-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos da Sprint
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Objetivos da Sprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blue-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blue Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entregas-coletivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Entregas Coletivas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contribuicoes-individuais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contribuições Individuais
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-maiores-avancos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Maiores Avanços
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Maiores Avanços">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blue-team_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blue Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pesquisa-e-selecao-do-arsenal-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pesquisa e Seleção do Arsenal de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ferramentas-de-seguranca-pesquisadas-e-avaliadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ferramentas de Segurança Pesquisadas e Avaliadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabela-comparativa-de-ferramentas-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabela Comparativa de Ferramentas de Segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacao-do-pip-audit-seguranca-de-dependencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementação do pip-audit - Segurança de Dependências
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementação do pip-audit - Segurança de Dependências">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-o-pip-audit-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como o pip-audit funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nossa-implementacao-no-ej-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nossa Implementação no EJ-Platform
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacao-do-semgrep-analise-estatica-de-codigo-sast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementação do semgrep - Análise estática de código (SAST)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementação do semgrep - Análise estática de código (SAST)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-o-semgrep-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como o semgrep funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nossa-implementacao-no-ej-platform_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nossa Implementação no EJ-Platform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-da-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado da pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-do-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultado do Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-arsenal-de-seguranca-escolhido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O Arsenal de Segurança Escolhido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-team_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Team
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red Team">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-sobre-xss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue sobre XSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contexto-da-abertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto da Abertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expectativa-vs-realidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expectativa vs. Realidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decisao-e-justificativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisão e Justificativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulacao-de-phishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulação de Phishing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacao-de-controle-de-acesso-broken-access-control-idor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validação de Controle de Acesso (Broken Access Control - IDOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-maiores-dificuldades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Maiores Dificuldades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-licoes-aprendidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Lições Aprendidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-planejamento-para-a-proxima-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Planejamento para a Próxima Sprint
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Planejamento para a Próxima Sprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blue-team_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blue Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-team_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estudo Blue Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Estudo Blue Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estudo/ci-cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estudo/ferramentas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ferramentas de segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../estudo/ferramentas-utilizadas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ferramentas de segurança Utilizadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diários
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diários
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guilherme Peixoto (170034941)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guilherme Peixoto (170034941)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/170034941/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/170034941/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/170034941/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/170034941/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sebastian Zuzunaga (211006957)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sebastian Zuzunaga (211006957)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211006957/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211006957/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211006957/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211006957/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211006957/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mateus Vieira (221008703)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mateus Vieira (221008703)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008703/mitre-xss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MITRE ATT&CK - XSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Júlio Costa (211031744)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Júlio Costa (211031744)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031744/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031744/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031744/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031744/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031744/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pedro Luiz Fonseca da Silva (231036980)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pedro Luiz Fonseca da Silva (231036980)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/231036980/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/231036980/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/231036980/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Marcus Vinicius (211031403)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marcus Vinicius (211031403)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031403/Sprint-0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031403/Sprint%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031403/Sprint-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031403/sprint-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211031403/Sprint-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Breno Lucena (202017343)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Breno Lucena (202017343)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/202017343/202017343.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/202017343/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/202017343/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/202017343/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/202017343/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/202017343/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Henrique Hida (180113569)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Henrique Hida (180113569)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/180113569/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/180113569/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/180113569/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daniel Rocha Oliveira (190104821)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Daniel Rocha Oliveira (190104821)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/190104821/sprint_0_diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/190104821/sprint_1_diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/190104821/sprint_2_diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/190104821/sprint_3_diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/190104821/sprint_4_diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/190104821/sprint_5_diario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Henrique Camelo Quenino (221008098)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Henrique Camelo Quenino (221008098)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221008098/poc-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Poc Scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ana Carolina Fialho (221031102)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ana Carolina Fialho (221031102)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221031102/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221031102/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221031102/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221031102/03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221031102/04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/221031102/05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Miguel Arthur Oliveira de Lima (211062320)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Miguel Arthur Oliveira de Lima (211062320)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211062320/0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211062320/01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211062320/02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211062320/03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../diarios/211062320/04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="relatorio-de-contribuicao-sprint-3">📝 Relatório de Contribuição – Sprint 3</h1>
+<p><strong>Disciplina:</strong> Gestão de Configuração e Evolução de Software</p>
+<p><strong>Equipe:</strong> OWASP (Times Blue e Red)</p>
+<p><strong>Período da Sprint:</strong> 07/10/2025 - 22/10/2025</p>
+<hr />
+<h2 id="1-objetivos-da-sprint">1. Objetivos da Sprint</h2>
+<h4 id="blue-team">Blue Team</h4>
+<p><strong>Seleção do Arsenal de Segurança e Início da Implementação de DevSecOps</strong></p>
+<ul>
+<li>Realizar uma pesquisa comparativa de ferramentas de segurança <em>open-source</em> nas categorias: <strong>Detecção de Segredos, Análise Estática (SAST), Análise de Dependências (SCA) e Infraestrutura como Código (IaC)</strong>.</li>
+<li>Selecionar o "arsenal" de ferramentas ideal para o projeto EJ-Platform, justificando a escolha do conjunto com base em critérios de complementaridade, performance e adequação ao projeto.</li>
+<li>Integrar a primeira ferramenta de segurança selecionada ao pipeline de CI/CD no GitLab, configurando um novo <em>job</em> e validando a sua execução automática a cada <code>push</code>.</li>
+<li>Documentar todo o processo de pesquisa e a decisão final em um relatório consolidado.</li>
+</ul>
+<h3 id="red-team">Red Team</h3>
+<ul>
+<li>Explorar Ataques:<ul>
+<li>IDOR</li>
+<li>Sessão (Cookies)</li>
+<li>Rate-limit / Fuzzing</li>
+</ul>
+</li>
+<li>Simular phishing no contexto da plataforma</li>
+<li>Validar segurança de controle de acesso (Broken Access Control)</li>
+<li>Análise de autenticação e tokens JWT</li>
+</ul>
+<hr />
+<h2 id="2-entregas-coletivas">2. Entregas Coletivas</h2>
+<table>
+<thead>
+<tr>
+<th>Entrega</th>
+<th>Status (Concluído/Parcial/Pendente)</th>
+<th>Link/Referência</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simular Phishing no Contexto da EJ</td>
+<td>Concluído</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Estudo e Implementação de Ferramentas de Segurança no CI/CD</td>
+<td>Concluído</td>
+<td></td>
+<td>Gitleaks, pip-audit e trivy</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-contribuicoes-individuais">3. Contribuições Individuais</h2>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Contribuições</th>
+<th>Links (PRs, Issues, Docs)</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Miguel Arthur</td>
+<td>Documentação e Tabela Comparativa</td>
+<td><a href="link">()</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Daniel Rocha</td>
+<td>Documentação e Resultados Parciais da Utilização do GitLeaks na pipeline do projeto, além dos testes locais utilizando o gitleaks</td>
+<td><a href="../../diarios/190104821/sprint_3_diario/">Diário Daniel</a></td>
+<td>Os resultados podem ser vistos na aba <strong>Exemplos práticos</strong></td>
+</tr>
+<tr>
+<td>Ana Carolina</td>
+<td>Análise de dependências com pip-audit</td>
+<td><a href="https://gitlab.com/caroll_mf/ej-application/-/commit/3f749028">Pipeline pip-audit</a></td>
+<td>Pipeline focada em segurança de dependências</td>
+</tr>
+<tr>
+<td>Mateus Vieira</td>
+<td>Abertura de Issue sobre XSS no EJ</td>
+<td><a href="https://gitlab.com/pencillabs/ej/ej-application/-/issues/1505">ej-application#1505</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Sebastián Zuzunaga</td>
+<td>Análise estática com semgrep</td>
+<td><a href="https://gitlab.com/sebazac332/ej-application-sebastian/-/pipelines/2114028625">Pipeline semgrep</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Henrique Quenino</td>
+<td>Validação de Controle de Acesso (IDOR), Testes de Manipulação de JWT e Análise de Autenticação</td>
+<td><a href="../../diarios/221008098/3/">Diário Sprint 3</a></td>
+<td>Ausência de vulnerabilidades críticas confirmada; Testes sistemáticos de endpoints, parâmetros e tokens</td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-maiores-avancos">4. Maiores Avanços</h2>
+<h3 id="blue-team_1">Blue Team</h3>
+<h3 id="pesquisa-e-selecao-do-arsenal-de-seguranca">Pesquisa e Seleção do Arsenal de Segurança</h3>
+<p>Dando continuidade ao plano de implementação de um pipeline de DevSecOps, o objetivo desta sprint foi realizar uma pesquisa aprofundada para selecionar o conjunto ideal de ferramentas de segurança para o projeto EJ-Platform.</p>
+<p>A metodologia consistiu em dividir a pesquisa em quatro categorias essenciais, visando criar uma estratégia de <strong>defesa em camadas</strong>, onde cada ferramenta possui uma responsabilidade clara e complementar:</p>
+<ol>
+<li><strong>Detecção de Segredos:</strong> Prevenir o vazamento de credenciais e chaves de API.</li>
+<li><strong>Análise Estática de Segurança (SAST):</strong> Encontrar vulnerabilidades no código-fonte da aplicação.</li>
+<li><strong>Análise de Composição de Software (SCA):</strong> Identificar vulnerabilidades em dependências de terceiros.</li>
+<li><strong>Segurança de Infraestrutura como Código (IaC):</strong> Garantir que a configuração dos nossos contêineres (<code>Dockerfile</code>) segue as boas práticas de segurança.</li>
+</ol>
+<h3 id="ferramentas-de-seguranca-pesquisadas-e-avaliadas">Ferramentas de Segurança Pesquisadas e Avaliadas</h3>
+<p>Nesta sprint, a equipe realizou uma pesquisa aprofundada e uma análise comparativa de ferramentas <em>open-source</em> em quatro categorias distintas para compor um arsenal de segurança coeso. O objetivo foi avaliar as melhores opções para cada camada de defesa do nosso pipeline de CI/CD.</p>
+<ul>
+<li>
+<p><strong>Detecção de Segredos (Secrets Detection)</strong></p>
+<ul>
+<li><strong>Gitleaks:</strong> Scanner rápido baseado em regras para encontrar credenciais e chaves de API expostas no código.</li>
+<li><strong>TruffleHog:</strong> Ferramenta de análise profunda que busca segredos com base em regras e na entropia dos dados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Análise Estática de Segurança (SAST)</strong></p>
+<ul>
+<li><strong>Bandit:</strong> Analisador focado em encontrar vulnerabilidades comuns e de baixo nível em código Python.</li>
+<li><strong>Semgrep:</strong> Motor de análise de código moderno e flexível, com uma vasta base de regras para frameworks web como o Django, capaz de encontrar vulnerabilidades complexas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Análise de Composição de Software (SCA)</strong></p>
+<ul>
+<li><strong>pip-audit:</strong> Ferramenta oficial do ecossistema Python que verifica dependências contra a base de dados de vulnerabilidades aberta (OSV).</li>
+<li><strong>Safety:</strong> Ferramenta tradicional que verifica dependências contra sua própria base de dados de vulnerabilidades.</li>
+</ul>
+</li>
+<li>
+<p><strong>Segurança de Infraestrutura como Código (IaC)</strong></p>
+<ul>
+<li><strong>Trivy:</strong> Scanner multifuncional que analisa <code>Dockerfiles</code> em busca de más práticas de segurança.</li>
+<li><strong>Checkov:</strong> Ferramenta especializada em IaC com uma cobertura extensiva de políticas de segurança para diversas plataformas.</li>
+</ul>
+<p>A tabela a seguir consolida os resultados desta pesquisa, comparando as principais ferramentas open-source para cada categoria com base em sua funcionalidade, vantagens, desvantagens e, crucialmente, seu fator decisivo para a integração em nosso pipeline.</p>
+</li>
+</ul>
+<h3 id="tabela-comparativa-de-ferramentas-de-seguranca">Tabela Comparativa de Ferramentas de Segurança</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Categoria</th>
+<th style="text-align: left;">Ferramenta</th>
+<th style="text-align: left;">Breve Descrição</th>
+<th style="text-align: left;">Comparação (Fator Decisivo)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Detecção de Segredos</strong></td>
+<td style="text-align: left;"><a href="https://github.com/gitleaks/gitleaks">Gitleaks</a></td>
+<td style="text-align: left;">Scanner rápido que busca segredos e credenciais em repositórios Git, utilizando uma base de regras de expressões regulares.</td>
+<td style="text-align: left;"><strong>Melhor para CI/CD:</strong> É extremamente rápido e leve por ser um binário único (escrito em Go). Sua simplicidade o torna ideal para ser executado a cada <code>push</code> sem impactar a velocidade do pipeline. É o padrão da indústria para prevenção rápida.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Detecção de Segredos</strong></td>
+<td style="text-align: left;"><a href="https://github.com/trufflesecurity/trufflehog">TruffleHog</a></td>
+<td style="text-align: left;">Scanner profundo que vai além de regras, analisando a entropia dos dados para encontrar chaves com formatos desconhecidos.</td>
+<td style="text-align: left;"><strong>Melhor para Auditorias Profundas:</strong> Sua capacidade de encontrar segredos com base na aleatoriedade (entropia) é mais poderosa, mas o torna significativamente mais lento. É uma ferramenta excelente para uma varredura completa e periódica, mas menos ideal para o pipeline do dia a dia.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SAST</strong></td>
+<td style="text-align: left;"><a href="https://github.com/PyCQA/bandit">Bandit</a></td>
+<td style="text-align: left;">Ferramenta de SAST focada em encontrar problemas de segurança comuns em código Python, analisando a Árvore de Sintaxe Abstrata (AST).</td>
+<td style="text-align: left;"><strong>Melhor para Simplicidade em Python:</strong> É uma ferramenta "clássica", muito simples de rodar (<code>pip install</code> e executar). Seu foco exclusivo em Python garante uma boa detecção de erros comuns no ecossistema (ex: uso de <code>pickle</code>, senhas fixas no código).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SAST</strong></td>
+<td style="text-align: left;"><a href="https://github.com/semgrep/semgrep">Semgrep</a></td>
+<td style="text-align: left;">Motor de análise de código moderno e multilíngue com uma sintaxe de regras poderosa e intuitiva.</td>
+<td style="text-align: left;"><strong>Melhor em Poder e Flexibilidade:</strong> É a evolução do SAST. Suas regras são mais fáceis de entender e customizar. A enorme base de regras da comunidade e a capacidade de se adaptar a qualquer padrão de código o tornam mais poderoso e "à prova de futuro" que o Bandit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SCA</strong></td>
+<td style="text-align: left;"><a href="https://github.com/pypa/pip-audit">pip-audit</a></td>
+<td style="text-align: left;">Ferramenta que escaneia as dependências do projeto em busca de vulnerabilidades, utilizando o banco de dados aberto e de alta qualidade OSV (Open Source Vulnerability).</td>
+<td style="text-align: left;"><strong>Melhor por usar um Padrão Aberto:</strong> Sendo da PyPA (a mesma autoridade que cuida do <code>pip</code>), usa o banco de dados OSV, que é um padrão da indústria mantido pelo Google. Isso garante dados de vulnerabilidade transparentes e de alta qualidade, sem restrições comerciais.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SCA</strong></td>
+<td style="text-align: left;"><a href="https://github.com/pyupio/safety">Safety</a></td>
+<td style="text-align: left;">Uma das ferramentas de SCA mais conhecidas para Python, que verifica as dependências instaladas contra seu próprio banco de dados de vulnerabilidades (Safety-DB).</td>
+<td style="text-align: left;"><strong>Modelo Comercial:</strong> Sua principal desvantagem é que a base de dados gratuita tem um atraso deliberado de 30 dias na divulgação de novas vulnerabilidades, incentivando a assinatura da versão paga. Para um projeto acadêmico, o <code>pip-audit</code> é uma escolha mais alinhada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IaC</strong></td>
+<td style="text-align: left;"><a href="https://github.com/aquasecurity/trivy">Trivy</a></td>
+<td style="text-align: left;">Scanner de vulnerabilidades multifuncional. Além de imagens de contêineres, ele também consegue escanear arquivos de configuração (como <code>Dockerfile</code> e <code>docker-compose.yml</code>) em busca de más práticas.</td>
+<td style="text-align: left;"><strong>Melhor pela Consolidação de Ferramentas:</strong> A grande vantagem é que poderemos usar a <strong>mesma ferramenta</strong> para escanear tanto a nossa IaC (Dockerfile) quanto as imagens Docker em uma sprint futura. Isso reduz a complexidade do pipeline e o número de ferramentas para aprender.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IaC</strong></td>
+<td style="text-align: left;"><a href="https://github.com/bridgecrewio/checkov">Checkov</a></td>
+<td style="text-align: left;">Ferramenta especializada em IaC que verifica arquivos de configuração contra centenas de políticas de segurança e boas práticas.</td>
+<td style="text-align: left;"><strong>Melhor em Cobertura Específica para IaC:</strong> É mais poderoso e tem uma quantidade maior de regras <em>específicas</em> para IaC do que o Trivy. É a escolha de especialistas em nuvem, mas talvez seja um exagero para o nosso escopo, que se limita a Dockerfiles e Docker Compose.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementacao-do-pip-audit-seguranca-de-dependencias">Implementação do pip-audit - Segurança de Dependências</h3>
+<h4 id="como-o-pip-audit-funciona">Como o pip-audit funciona</h4>
+<p>O pip-audit opera através de um processo simples mas eficaz:
+1. Coleta todas as dependências do projeto
+2. Consulta o banco de dados OSV (Open Source Vulnerability) mantido pelo Google
+3. Compara as versões das dependências com vulnerabilidades conhecidas
+4. Gera um relatório claro indicando quais pacotes necessitam de atualização</p>
+<h4 id="nossa-implementacao-no-ej-platform">Nossa Implementação no EJ-Platform</h4>
+<p><strong>Desafio técnico:</strong> O projeto EJ-Platform utiliza Poetry como gerenciador de dependências, enquanto o pip-audit tradicionalmente trabalha com arquivos requirements.txt. Foi necessário desenvolver uma solução de integração entre os dois sistemas.</p>
+<p><strong>Solução implementada:</strong></p>
+<pre><code class="language-yaml">dependency-audit:
+  stage: security
+  image: python:3.11-slim
+  script:
+    - pip install pip-audit
+    - pip install &quot;poetry==1.8.3&quot;
+    - poetry export -f requirements.txt --output requirements.txt --without-hashes
+    - pip-audit -r requirements.txt --format=columns
+  allow_failure: false
+</code></pre>
+<h3 id="implementacao-do-semgrep-analise-estatica-de-codigo-sast">Implementação do semgrep - Análise estática de código (SAST)</h3>
+<h4 id="como-o-semgrep-funciona">Como o semgrep funciona</h4>
+<ol>
+<li>Analisa o código-fonte e gera uma árvore sintática abstrata.</li>
+<li>Aplica regras que definem padrões de código suspeito.</li>
+<li>Gera um relatório com os achados que podem ser exibidos no terminal, salvos em JSON, ou integrados ao pipeline CI/CD.</li>
+</ol>
+<h4 id="nossa-implementacao-no-ej-platform_1">Nossa Implementação no EJ-Platform</h4>
+<p><strong>Solução implementada:</strong></p>
+<pre><code class="language-yaml">semgrep:
+  stage: security
+  image: semgrep/semgrep
+  script: semgrep ci
+  rules:
+  - when: always
+  variables:
+
+    SEMGREP_APP_TOKEN: $SEMGREP_APP_TOKEN
+    GITLAB_TOKEN: $PAT
+
+  allow_failure: true
+</code></pre>
+<h4 id="resultado-da-pipeline">Resultado da pipeline</h4>
+<p><img alt="Pipeline semgrep" src="../../imgs/pipeline_semgrep_sebastian.PNG" /></p>
+<h4 id="resultado-do-job">Resultado do Job</h4>
+<p><img alt="Semgrep job" src="../../imgs/semgrep_job_sebastian.PNG" /></p>
+<h3 id="o-arsenal-de-seguranca-escolhido">O Arsenal de Segurança Escolhido</h3>
+<p>Após a consolidação da pesquisa e a deliberação em equipe, o Blue Team selecionou o seguinte conjunto de ferramentas para compor o arsenal de segurança oficial do projeto EJ-Platform. A escolha foi baseada nos critérios de complementaridade, performance, facilidade de integração e adequação ao ecossistema Python/Django, visando criar uma estratégia de defesa em camadas robusta e eficiente.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Categoria</th>
+<th style="text-align: left;">Ferramenta Escolhida</th>
+<th style="text-align: left;">Breve Descrição</th>
+<th style="text-align: left;">Justificativa da Escolha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Detecção de Segredos</strong></td>
+<td style="text-align: left;"><a href="https://github.com/gitleaks/gitleaks">Gitleaks</a></td>
+<td style="text-align: left;">Scanner rápido que busca segredos e credenciais em repositórios Git, utilizando uma base de regras de expressões regulares.</td>
+<td style="text-align: left;"><strong>Ideal para CI/CD:</strong> É extremamente rápido e leve. Sua simplicidade o torna perfeito para ser executado a cada <code>push</code> sem impactar a velocidade do pipeline, prevenindo o risco mais imediato.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SAST</strong></td>
+<td style="text-align: left;"><a href="https://github.com/semgrep/semgrep">Semgrep</a></td>
+<td style="text-align: left;">Motor de análise de código moderno e flexível, com uma vasta base de regras para frameworks web como o Django.</td>
+<td style="text-align: left;"><strong>Poder e Flexibilidade:</strong> É a evolução do SAST. Suas regras são mais fáceis de entender e customizar, e sua capacidade de compreender o contexto do Django o torna mais preciso na detecção de vulnerabilidades complexas (IDOR, XSS).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SCA</strong></td>
+<td style="text-align: left;"><a href="https://github.com/pypa/pip-audit">pip-audit</a></td>
+<td style="text-align: left;">Ferramenta que escaneia as dependências do projeto em busca de vulnerabilidades, utilizando o banco de dados aberto e de alta qualidade OSV.</td>
+<td style="text-align: left;"><strong>Padrão Aberto e Confiável:</strong> Sendo uma ferramenta oficial da PyPA e utilizando a base de dados OSV, garante acesso a informações de vulnerabilidades transparentes, imediatas e sem restrições comerciais.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IaC</strong></td>
+<td style="text-align: left;"><a href="https://github.com/aquasecurity/trivy">Trivy</a></td>
+<td style="text-align: left;">Scanner de vulnerabilidades multifuncional que analisa <code>Dockerfiles</code> e imagens de contêiner em busca de más práticas e vulnerabilidades.</td>
+<td style="text-align: left;"><strong>Consolidação de Ferramentas:</strong> A grande vantagem é que usaremos a mesma ferramenta para escanear tanto a nossa IaC (nesta fase) quanto as imagens Docker (em sprints futuras), simplificando a complexidade do pipeline.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="red-team_1">Red Team</h3>
+<h4 id="issue-sobre-xss">Issue sobre XSS</h4>
+<p>Durante a análise do sistema <strong>Empurrando Juntas</strong>, foi identificada uma vulnerabilidade <strong>Cross-Site Scripting (XSS)</strong> do tipo <strong>Persistente (Stored XSS)</strong>.
+A falha foi reportada oficialmente por meio de uma <strong>issue pública</strong> no GitLab:
+🔗 <a href="https://gitlab.com/pencillabs/ej/ej-application/-/issues/1505">Issue #1505 — Empurrando Juntas</a></p>
+<h4 id="contexto-da-abertura">Contexto da Abertura</h4>
+<ul>
+<li>Antes de abrir a issue, surgiu a dúvida sobre <strong>a segurança de divulgar publicamente</strong> uma vulnerabilidade.</li>
+<li>A questão foi discutida:<ul>
+<li>No <strong>canal oficial do Telegram</strong> da comunidade EJ.</li>
+<li>Diretamente com o <strong>monitor Rodolfo</strong>.</li>
+</ul>
+</li>
+<li>Ambos confirmaram que <strong>a abertura pública era adequada</strong>.</li>
+</ul>
+<h4 id="expectativa-vs-realidade">Expectativa vs. Realidade</h4>
+<ul>
+<li>A expectativa era existir um <strong>canal mais reservado ou confidencial</strong> para reportar falhas de segurança (ex.: formulário interno, e-mail restrito ou programa de <em>responsible disclosure</em>).</li>
+<li>Contudo, essa opção <strong>não estava disponível</strong>, sendo o <strong>GitLab público</strong> o meio indicado para o registro da vulnerabilidade.</li>
+</ul>
+<h4 id="decisao-e-justificativa">Decisão e Justificativa</h4>
+<ul>
+<li>Mesmo com a divulgação pública, não houve desconforto significativo, pois:<ul>
+<li>O impacto da falha é <strong>alto</strong> (possibilita execução de código no navegador).</li>
+<li>Mas o nível de exploração é <strong>baixo</strong> (exige usuário autenticado com permissões específicas).</li>
+</ul>
+</li>
+</ul>
+<h4 id="conclusao">Conclusão</h4>
+<p>A issue foi aberta de forma transparente e responsável, seguindo boas práticas de comunicação com a comunidade. Essa experiência destacou a importância de reportar falhas de segurança de forma ética, e também a necessidade de que projetos open source ofereçam canais seguros e sigilosos para esse tipo de comunicação.</p>
+<hr />
+<h4 id="simulacao-de-phishing">Simulação de Phishing</h4>
+<p>A plataforma "Empurrando Juntas" é utilizada para facilitar a criação de conversas e votações em ambientes de opinião, permitindo a participação cívica e democrática. A análise da infraestrutura de e-mail revelou as seguintes características para mensagens legítimas:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Valor Exemplo</th>
+<th style="text-align: left;">Análise de Segurança</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>from:</strong></td>
+<td style="text-align: left;">Empurrando Juntas <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#100;&#64;&#99;&#105;&#100;&#97;&#100;&#101;&#100;&#101;&#109;&#111;&#99;&#114;&#97;&#116;&#105;&#99;&#97;&#46;&#111;&#114;&#103;&#46;&#98;&#114;">&#99;&#100;&#64;&#99;&#105;&#100;&#97;&#100;&#101;&#100;&#101;&#109;&#111;&#99;&#114;&#97;&#116;&#105;&#99;&#97;&#46;&#111;&#114;&#103;&#46;&#98;&#114;</a> via pencillabs.tec.br</td>
+<td style="text-align: left;">Endereço legítimo aparente com retransmissão por subdomínio <code>pencillabs.tec.br</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>to:</strong></td>
+<td style="text-align: left;">X (Destinatário)</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>date:</strong></td>
+<td style="text-align: left;">Oct 17, 2025, 10:21 AM</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>subject:</strong></td>
+<td style="text-align: left;">Please reset your password (Exemplo)</td>
+<td style="text-align: left;">Assunto relevante ao contexto de uso.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>mailed-by:</strong></td>
+<td style="text-align: left;">pencillabs.tec.br</td>
+<td style="text-align: left;">Confirma o remetente legítimo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>signed-by:</strong></td>
+<td style="text-align: left;">pencillabs.tec.br</td>
+<td style="text-align: left;">Assinatura por DKIM/SPF legítima.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>security:</strong></td>
+<td style="text-align: left;">Standard encryption (TLS)</td>
+<td style="text-align: left;">Criptografia padrão durante o trânsito.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Objetivo da Simulação:</strong></p>
+<p>O objetivo desta simulação é avaliar a suscetibilidade dos usuários da plataforma "Empurrando Juntas" a um ataque de <em>phishing</em> direcionado (<em>spear phishing</em>), utilizando como isca uma indicação de fraude em conta, para roubo de credenciais (Nome de Usuário e Senha).</p>
+<p><strong>Detalhes da Simulação de Phishing:</strong></p>
+<p><strong>1. Preparação do E-mail Malicioso:</strong></p>
+<p>O e-mail malicioso deve ser construído para replicar a aparência e os detalhes técnicos de um e-mail legítimo da plataforma, explorando a confiança dos usuários.</p>
+<p><strong>Características do E-mail Falso:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Valor Simulador (Ataque)</th>
+<th style="text-align: left;">Estratégia de Engenharia Social</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>from:</strong></td>
+<td style="text-align: left;"><code>Empurrando Juntas &lt;suporte@cidadedemocratica.org.br&gt;</code> (Variação) <strong>OU</strong> <code>Empurrando Juntas &lt;cd@cidadedemocratica.org.br&gt; via pencillabss.tec.br</code> (Typosquatting)</td>
+<td style="text-align: left;">Uso de endereço de e-mail semelhante ou réplica, explorando a desatenção do destinatário.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>subject:</strong></td>
+<td style="text-align: left;"><strong>Sua Opinião é Crucial - Votação Bloqueada Devido a Fraudes</strong></td>
+<td style="text-align: left;">Cria senso de urgência e importância, motivando o clique imediato.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>mailed-by/signed-by:</strong></td>
+<td style="text-align: left;">Servidor de e-mail malicioso (Ex: <code>phish-server.com</code>)</td>
+<td style="text-align: left;">Difícil de replicar a assinatura legítima, mas muitos usuários não verificam esses campos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Corpo da Mensagem:</strong></td>
+<td style="text-align: left;">Simulação de uma notificação de que a votação em andamento foi temporariamente suspensa e que, para desbloqueá-la e garantir a segurança do voto, é necessário que o usuário <strong>revalide</strong> sua conta clicando no link abaixo e fornecendo suas credenciais.</td>
+<td style="text-align: left;">Usa o vocabulário da plataforma ("votação", "opinião") para aumentar a credibilidade e insere um <strong>Call to Action (CTA)</strong> urgente.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Link (CTA):</strong></td>
+<td style="text-align: left;"><code>https://empurrandajuntas.com/revalidacao/login-seguro</code> (URL falsa com <em>typosquatting</em> ou subdomínio)</td>
+<td style="text-align: left;">O link direciona para uma página de <em>login</em> falsa que imita a interface da plataforma "Empurrando Juntas".</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Conteúdo Simulador (Corpo do E-mail):</strong></p>
+<blockquote>
+<p>Prezado(a) Participante,</p>
+<p>Sua participação é vital para a transparência de nossas conversas e votações.</p>
+<p>Detectamos atividades suspeitas que indicam uma possível tentativa de fraude em uma das votações que você está participando. Para proteger a integridade do processo e garantir que sua voz seja ouvida, fomos obrigados a suspender temporariamente sua conta e acesso a todas as votações.</p>
+<p>Para reativar sua participação e permitir a continuidade das discussões, é <strong>obrigatório</strong> que você revalide suas credenciais imediatamente no link seguro abaixo:</p>
+<p><a href="https://empurrandajuntas.com/revalidacao/login-seguro"><strong>Clique aqui para revalidar sua conta</strong></a></p>
+<p><em>O não cumprimento desta ação em até 24 horas resultará na exclusão da sua participação nas votações em andamento.</em></p>
+<p>Atenciosamente,</p>
+<p>Equipe de Segurança da Plataforma Empurrando Juntas.</p>
+</blockquote>
+<p><strong>Obs:</strong> A landing page (link) falsa em si não foi criada, uma vez que isso transpassa a ética dessa simulação. Logo, a url utilizada no email é apenas um exemplo não funcional.</p>
+<p><strong>3. Página de Destino (Landing Page Falsa):</strong></p>
+<p>Ao clicar no link, o usuário é direcionado a uma página (hospedada pelo atacante) visualmente idêntica à página de login oficial da plataforma. A página solicita o <strong>Nome de Usuário (ou Email)</strong> e a <strong>Senha</strong>.</p>
+<p>Após o usuário inserir as credenciais, a página falsa:</p>
+<ol>
+<li><strong>Captura os dados</strong> (<code>usuário</code> e <code>senha</code>) e os armazena no servidor do atacante.</li>
+<li><strong>Redireciona o usuário</strong> para a página inicial (ou de login) legítima da plataforma, exibindo uma mensagem de erro genérica ("Sua sessão expirou, tente novamente"), para que a vítima acredite que apenas digitou as credenciais incorretamente, sem suspeitar do roubo.</li>
+</ol>
+<p><strong>Conclusão da Simulação:</strong></p>
+<p>A simulação de <em>phishing</em> neste contexto explora o modelo de comunicação por e-mail, a relevância do tema (votação/opinião) e a urgência (<em>call to action</em> para desbloqueio de conta) para induzir a vítima a fornecer suas credenciais. O roubo de credenciais permite ao atacante acesso total à conta da vítima, possibilitando manipulação de votos, conversas e roubo de dados sensíveis.</p>
+<h4 id="validacao-de-controle-de-acesso-broken-access-control-idor">Validação de Controle de Acesso (Broken Access Control - IDOR)</h4>
+<p><strong>Metodologia:</strong>
+- Mapeamento completo dos endpoints da aplicação via DevTools durante navegação autenticada
+- Testes manuais de manipulação de parâmetros e URLs
+- Análise e tentativa de manipulação de tokens JWT
+- Validação de claims de privilégio</p>
+<p><strong>Conclusões:</strong>
+- A inexistência de vulnerabilidades de Broken Access Control representa um forte indicativo de que os controles de autorização foram implementados corretamente
+- Proteção robusta dos tokens JWT demonstra um bom mecanismo de autenticação e prevenção contra elevação indevida de privilégios
+- A análise sistemática valida metodologias de segurança adotadas e garante transparência no ciclo de desenvolvimento seguro</p>
+<hr />
+<h2 id="5-maiores-dificuldades">5. Maiores Dificuldades</h2>
+<ul>
+<li>Integração de ferramentas de segurança (Gitleaks, Bandit) no fluxo CI/CD existente.</li>
+<li>Análise Crítica Além da Popularidade: Uma dificuldade inicial foi superar a tendência de escolher apenas as ferramentas mais conhecidas. Foi necessário um esforço ativo para pesquisar alternativas e entender que a "melhor" ferramenta depende muito do contexto do projeto (Python/Django, GitLab CI) e não apenas de sua popularidade geral.</li>
+<li>Diferenciação de Ferramentas com Propósitos Similares: Distinguir o valor real entre ferramentas da mesma categoria foi um desafio. Por exemplo, entender as nuances entre Bandit e Semgrep (SAST) ou entre pip-audit e Safety (SCA) exigiu ir além da descrição superficial e analisar a fundo suas bases de regras, modelos de negócio (no caso do Safety) e flexibilidade.</li>
+</ul>
+<hr />
+<h2 id="6-licoes-aprendidas">6. Lições Aprendidas</h2>
+<ul>
+<li>Importância da integração de ferramentas de segurança no ciclo de desenvolvimento.</li>
+<li>A Pesquisa Estruturada Leva a Decisões Mais Sólidas: A tarefa de preencher uma tabela comparativa com critérios definidos nos forçou a analisar as ferramentas de forma objetiva. Isso evitou decisões baseadas em "achismo" e resultou em uma escolha de arsenal bem fundamentada e fácil de justificar para o restante do projeto.</li>
+<li>Validação de Segurança por Testes Práticos: A execução sistemática de testes, mesmo quando não encontram vulnerabilidades, é vital para documentar a maturidade do código e reforçar a confiança em controles de acesso.</li>
+<li>Responsabilidade no Disclosure de Vulnerabilidades: A comunicação ética e responsável ao reportar falhas de segurança é essencial, mesmo em contextos de pesquisa acadêmica.</li>
+</ul>
+<hr />
+<h2 id="7-planejamento-para-a-proxima-sprint">7. Planejamento para a Próxima Sprint</h2>
+<h3 id="blue-team_2">Blue Team</h3>
+<ul>
+<li>Implementar as ferramentas de segurança no pipeline CI/CD do projeto oficial</li>
+<li>Criar monitoramento contínuo de vulnerabilidades</li>
+<li>Estabelecer o Ambiente de Trabalho: Definir um <em>fork</em> oficial do projeto que servirá como ambiente de desenvolvimento e testes para a implementação do pipeline, garantindo um espaço colaborativo sem impactar o repositório principal.</li>
+<li>Implementação Gradual do Arsenal de Segurança: Integrar as ferramentas selecionadas (Detecção de Segredos, SAST e SCA) como <em>jobs</em> distintos dentro de um novo <em>stage</em> de segurança (<code>security_scan</code>) no arquivo <code>.gitlab-ci.yml</code>.</li>
+<li>Análise e Refinamento dos Resultados: Executar o pipeline completo, analisar os relatórios (artefatos) gerados pelas ferramentas, identificar possíveis falsos positivos e refinar as configurações para otimizar a precisão dos <em>scans</em>.</li>
+<li>Documentação do Processo: Criar a documentação formal da estrutura do pipeline, explicando o propósito de cada <em>stage</em>, cada <em>job</em> e como interpretar os resultados, garantindo que o conhecimento seja compartilhado por toda a equipe.</li>
+</ul>
+<h3 id="red-team_2">Red Team</h3>
+<ul>
+<li>Continuidade dos ataques:</li>
+<li>Session Hijacking</li>
+<li>Fuzzing e Rate Limiting</li>
+<li>Estudo sobre novas ferramentas de ataques e verificação</li>
+<li>Contribuição para solução do XSS</li>
+<li>Aprofundamento em técnicas de fuzzing e análise de comportamento de API</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
